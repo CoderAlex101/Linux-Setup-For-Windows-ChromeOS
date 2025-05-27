@@ -127,3 +127,16 @@ Use Windows Terminal — it’s great for managing PowerShell, Command Prompt, a
 Use code . inside WSL to open VS Code with Linux support
 
 Install zsh, fish, or customize your shell for a better terminal experience
+
+Common WSL Commands
+
+wsl	Launch default distro shell
+wsl -l or wsl --list	List installed Linux distros
+wsl -l -v or wsl --list --verbose	List distros with version info (WSL1/WSL2)
+wsl -d <DistroName>	Launch specific distro
+wsl --set-default <DistroName>	Set default distro
+wsl --set-version <DistroName> 2	Upgrade distro to WSL2
+wsl --shutdown	Shutdown all running WSL distros
+wsl --terminate <DistroName>	Terminate a specific distro
+wsl --export <DistroName> <file.tar>	Export a distro to a tar file
+wsl --import <DistroName> <InstallLocation> <file.tar>	Import distro from tarball
