@@ -1,4 +1,4 @@
-# Linux-Setup-For-Windows-ChromeOS
+# Linux-Setup
 Linux Setup For Windows/ChromeOS
 
 🌱 Why You Should Use WSL (Windows Subsystem for Linux)
