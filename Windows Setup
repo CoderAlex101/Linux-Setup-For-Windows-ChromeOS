@@ -1,0 +1,129 @@
+🛠️ How to Set Up WSL on Windows (Step-by-Step)
+✅ Requirements
+Windows 10 (Version 2004 or higher) or Windows 11
+
+Admin access to your PC
+
+🧾 Step 1: Open PowerShell as Administrator
+Press Start
+
+Type PowerShell
+
+Right-click on it and choose "Run as Administrator"
+
+💻 Step 2: Run the One-Line Install Command
+In PowerShell, paste this:
+
+powershell
+Copy
+Edit
+wsl --install
+Then press Enter.
+
+This command will:
+
+Enable the WSL feature
+
+Download and install WSL 2 (the newer version)
+
+Install Ubuntu by default (you can change it later)
+
+Reboot your PC if needed
+
+🔁 Step 3: Wait and Restart
+Once the installation is complete, your PC may restart.
+
+After reboot, you should see a Ubuntu terminal window open automatically, asking you to create a username and password for Linux.
+
+✅ That means you're all set!
+
+🐧 Step 4: Using WSL
+Now you can use WSL just like a Linux terminal.
+
+To open it:
+
+Press Start, type Ubuntu, and open it
+
+Or open Windows Terminal and choose Ubuntu from the tab menu
+
+You can now:
+
+Use Linux commands (ls, cd, touch, etc.)
+
+Install packages via apt:
+
+bash
+Copy
+Edit
+sudo apt update && sudo apt upgrade
+sudo apt install nodejs python3 git
+🛍️ Step 5: Installing Other Linux Distros (Optional)
+If you want something besides Ubuntu (like Debian, Kali, or Arch):
+
+powershell
+Copy
+Edit
+wsl --list --online
+To install one:
+
+powershell
+Copy
+Edit
+wsl --install -d <distro-name>
+Example:
+
+powershell
+Copy
+Edit
+wsl --install -d debian
+📂 Step 6: Accessing Files
+You can access Windows files in WSL like this:
+
+bash
+Copy
+Edit
+cd /mnt/c/Users/YourUsername/Desktop
+And from Windows, you can access Linux files by opening:
+
+plaintext
+Copy
+Edit
+\\wsl$\Ubuntu\
+in File Explorer.
+
+🔄 Bonus: Set WSL 2 as Default
+If it didn’t already default to WSL 2:
+
+powershell
+Copy
+Edit
+wsl --set-default-version 2
+To check your distro’s version:
+
+powershell
+Copy
+Edit
+wsl --list --verbose
+To upgrade one:
+
+powershell
+Copy
+Edit
+wsl --set-version Ubuntu 2
+✅ You're Done!
+Now you can:
+
+Run Linux scripts
+
+Use Git like in Linux
+
+Run VS Code in Linux mode (code .)
+
+Even use Docker Desktop with WSL 2 integration
+
+💡 Extra Tips
+Use Windows Terminal — it’s great for managing PowerShell, Command Prompt, and WSL in one place
+
+Use code . inside WSL to open VS Code with Linux support
+
+Install zsh, fish, or customize your shell for a better terminal experience
