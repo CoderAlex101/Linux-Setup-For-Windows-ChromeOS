@@ -28,6 +28,8 @@ Developer Tools: Visual Studio, PowerShell, Windows Subsystem for Linux (WSL)
 
 Limitations: Susceptible to malware if not updated; privacy concerns
 
+
+
 2. macOS (Apple)
 Introduced: 2001 (macOS X), evolved from NeXTSTEP and BSD
 
@@ -55,6 +57,8 @@ Gatekeeper for signed apps only
 
 Limitation: Locked to Apple hardware; limited gaming support
 
+
+
 3. Linux (Open-source)
 Introduced: 1991 by Linus Torvalds
 
@@ -80,7 +84,11 @@ Used in 90%+ of all cloud servers
 
 Use Cases: Web hosting, coding, ethical hacking (Kali Linux), IoT
 
+
+
 📱 Mobile Operating Systems
+
+
 4. Android (Google)
 Released: 2008
 
@@ -101,6 +109,8 @@ Deep Google integration (Maps, Assistant, Drive)
 Split-screen multitasking
 
 Drawbacks: Delayed updates across manufacturers; ad tracking concerns
+
+
 
 5. iOS (Apple)
 Released: 2007 (with first iPhone)
@@ -127,6 +137,8 @@ Regular updates for all devices
 
 Drawbacks: No sideloading (unless jailbroken); locked ecosystem
 
+
+
 6. iPadOS (Apple)
 Split from iOS in 2019
 
@@ -135,6 +147,8 @@ Adds multitasking: Stage Manager, Split View, Slide Over
 Optimized for Apple Pencil, Magic Keyboard
 
 File app is more capable than in iOS
+
+
 
 7. HarmonyOS (Huawei)
 Introduced due to US sanctions in 2019
@@ -146,6 +160,8 @@ Cross-device deployment: phones, TVs, smart home
 Uses Huawei Mobile Services (HMS) instead of Google
 
 Hybrid compatibility with Android apps
+
+
 
 💻 Server Operating Systems
 8. Windows Server
@@ -165,6 +181,8 @@ Use Cases: Enterprise networks, Azure deployments, web servers with IIS
 
 GUI & Core Versions: Core version is headless for better performance
 
+
+
 9. Linux Server Distros
 RHEL/CentOS/AlmaLinux: Enterprise-ready with long-term support
 
@@ -180,7 +198,12 @@ Firewall (UFW, iptables)
 
 Use Cases: LAMP stacks (Linux, Apache, MySQL, PHP), Docker hosts, Kubernetes clusters
 
+
+
 🎮 Gaming Consoles OS
+
+
+
 10. Xbox OS
 Based on a custom Windows kernel
 
@@ -192,12 +215,16 @@ Integration with Xbox Live, Game Pass
 
 UWP (Universal Windows Platform) support
 
+
+
 11. PlayStation OS
 Fork of FreeBSD (UNIX-based)
 
 Custom shell and low-latency gaming enhancements
 
 Supports PlayStation Network, remote play, and exclusive APIs like GNM/GNMX
+
+
 
 12. Nintendo Switch OS
 Based on Linux
@@ -209,6 +236,8 @@ Nintendo eShop and Joy-Con integration
 Strong DRM, minimal multitasking
 
 🧠 Embedded & IoT Operating Systems
+
+
 13. RTOS (Real-Time Operating Systems)
 Deterministic response time, ideal for time-critical systems
 
@@ -228,6 +257,8 @@ Hard/soft real-time capabilities
 
 Cooperative or preemptive multitasking
 
+
+
 14. Chrome OS
 Web-first OS built on Chromium and Gentoo Linux
 
@@ -246,6 +277,8 @@ HTML5/web-app based framework
 
 Supports native C apps and .NET through Xamarin
 
+
+
 16. KaiOS
 Revives Firefox OS
 
@@ -254,6 +287,8 @@ Focused on 4G feature phones
 Lightweight HTML5-based app store
 
 Used in low-end devices globally (e.g., JioPhone)
+
+
 
 17. Wear OS (Google)
 Android-based smartwatch OS
@@ -264,12 +299,16 @@ Google Assistant, NFC payments, app syncing
 
 Available on brands like Fossil, TicWatch
 
+
+
 18. tvOS (Apple)
 Used in Apple TV
 
 Supports Siri, HomeKit, and Apple Arcade
 
 Apps built using UIKit or SwiftUI
+
+
 
 19. watchOS (Apple)
 Runs Apple Watch
@@ -278,7 +317,11 @@ HealthKit, ECG monitoring, emergency detection
 
 Tightly integrated with iPhone and iCloud
 
+
+
 🧪 Experimental / Hobbyist Operating Systems
+
+
 20. ReactOS
 Open-source clone of Windows
 
@@ -286,12 +329,16 @@ Goal: Run Windows apps and drivers natively
 
 Not production-ready but great for reverse engineering
 
+
+
 21. Haiku OS
 Inspired by BeOS (fast multimedia OS from the '90s)
 
 Single-threaded UI server, responsive performance
 
 Community-maintained, fully open source
+
+
 
 22. TempleOS
 Created by the late Terry A. Davis
