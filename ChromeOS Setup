@@ -1,0 +1,180 @@
+1. What is Linux on ChromeOS?
+ChromeOS supports a built-in Linux container called Crostini, letting you run Linux apps and tools directly on your Chromebook. It’s fully integrated, lightweight, and uses Debian Linux by default.
+
+2. Enable Linux (Beta) on ChromeOS
+Step-by-step:
+Open Settings on your Chromebook.
+
+Scroll down to “Developers” or “Linux (Beta)” section.
+
+Click “Turn On” next to Linux development environment.
+
+Follow the prompts:
+
+Set your Linux username.
+
+Choose disk size for Linux container.
+
+Wait while ChromeOS downloads and sets up the Linux container.
+
+Once ready, a terminal window opens automatically.
+
+3. Linux Terminal Basics on ChromeOS
+The terminal you get is a full Debian shell.
+
+4. Basic Commands and Usage
+Linux Container Startup
+Open Linux terminal: Click the Terminal app in your launcher or search “Terminal”.
+
+To restart Linux container (if needed):
+
+bash
+Copy
+Edit
+vmc stop termina
+vmc start termina
+Package Management (APT commands)
+Update package lists:
+
+bash
+Copy
+Edit
+sudo apt update
+Upgrade installed packages:
+
+bash
+Copy
+Edit
+sudo apt upgrade
+Install packages:
+
+bash
+Copy
+Edit
+sudo apt install <package-name>
+Example:
+
+bash
+Copy
+Edit
+sudo apt install git vim curl
+Remove packages:
+
+bash
+Copy
+Edit
+sudo apt remove <package-name>
+Filesystem and Navigation
+Command	Description
+pwd	Show current directory
+ls	List directory contents
+ls -la	List with details including hidden files
+cd <path>	Change directory
+mkdir <dir>	Create a new directory
+rm <file>	Remove a file
+rm -r <dir>	Remove directory recursively
+
+Accessing ChromeOS files from Linux
+Your ChromeOS files are mounted under:
+
+bash
+Copy
+Edit
+/mnt/chromeos/MyFiles/
+Example:
+
+bash
+Copy
+Edit
+cd /mnt/chromeos/MyFiles/Downloads
+Sharing Folders
+You can share folders from ChromeOS to Linux:
+
+Right-click a folder in Files app → Share with Linux.
+
+The folder will appear inside the Linux filesystem under /mnt/chromeos/MyFiles/...
+
+Running GUI Apps (if supported)
+On newer ChromeOS versions, you can run GUI Linux apps:
+
+Install GUI app, e.g.:
+
+bash
+Copy
+Edit
+sudo apt install gedit
+Launch by typing the app name:
+
+bash
+Copy
+Edit
+gedit
+Installing Development Tools
+Example: Installing Python 3, Node.js, and Git
+
+bash
+Copy
+Edit
+sudo apt install python3 python3-pip nodejs npm git
+Useful Linux commands on ChromeOS terminal
+Command	Description
+sudo	Run command as root
+whoami	Show current user
+top	Monitor processes
+htop (install)	Interactive process viewer
+nano <file>	Simple text editor
+vim <file>	Advanced text editor
+ssh user@host	Connect via SSH
+curl <url>	Transfer data from URL
+wget <url>	Download files
+
+5. Managing the Linux Container
+Check Linux container status:
+bash
+Copy
+Edit
+vmc list
+Stop Linux container:
+bash
+Copy
+Edit
+vmc stop termina
+Restart Linux container:
+bash
+Copy
+Edit
+vmc restart termina
+6. Backup & Restore Linux Container
+Backup:
+
+Export your Linux container:
+
+bash
+Copy
+Edit
+vmc export termina ~/termina_backup.tgz
+Restore:
+
+bash
+Copy
+Edit
+vmc import termina ~/termina_backup.tgz
+7. Advanced Tips
+Use sudo passwd to set a root password (optional).
+
+To customize Linux container resources (CPU, RAM, disk size), use ChromeOS Developer options (more complex, usually unnecessary).
+
+You can use VS Code Remote - WSL equivalent with Crostini by connecting VS Code installed on ChromeOS to the Linux container via SSH.
+
+8. Summary of Key Commands
+Command	Purpose
+sudo apt update	Update package list
+sudo apt upgrade	Upgrade installed packages
+sudo apt install <package>	Install software
+sudo apt remove <package>	Remove software
+cd /mnt/chromeos/MyFiles/	Access ChromeOS files
+vmc list	List Linux containers
+vmc stop termina	Stop Linux container
+vmc restart termina	Restart Linux container
+vmc export termina <file.tgz>	Backup container
+vmc import termina <file.tgz>	Restore container
