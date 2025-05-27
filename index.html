@@ -105,7 +105,7 @@
     padding-bottom: 0.3rem;
   }
 
-  section p, section ul {
+  section p, section ul, section pre {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
@@ -299,153 +299,190 @@ Features:
 - UWP (Universal Windows Platform) support
 
 PlayStation OS Fork of FreeBSD (UNIX-based)
-Custom shell and low-latency gaming enhancements
-Supports PlayStation Network, remote play, and exclusive APIs like GNM/GNMX
+Custom shell and multimedia framework
 
-Nintendo Switch OS Based on Linux
-Lightweight, cartridge-optimized
-Nintendo eShop and Joy-Con integration
-Strong DRM, minimal multitasking
+Nintendo Switch OS Custom OS based on FreeBSD and Nintendo middleware
 
-🧠 Embedded & IoT Operating Systems
+Use Cases: Optimized gaming experience, app stores, online services
 
-RTOS (Real-Time Operating Systems) Deterministic response time, ideal for time-critical systems
-Examples:
-- FreeRTOS: Open-source, used in microcontrollers
-- VxWorks: Aerospace and defense-grade
-- QNX: Used in automotive (BlackBerry QNX)
+---
 
-Traits:
-- Minimal footprint
-- Hard/soft real-time capabilities
-- Cooperative or preemptive multitasking
-
-Chrome OS Web-first OS built on Chromium and Gentoo Linux
-Chromebook-exclusive
-Supports Android apps (via ARC) and Linux (via Crostini)
-Benefits: Lightning fast boot, secure sandboxing, cloud sync
-
-Tizen Open-source, backed by Linux Foundation and Samsung
-Used in: Smart TVs, Samsung Gear smartwatches, refrigerators
-HTML5/web-app based framework
-Supports native C apps and .NET through Xamarin
-
-KaiOS Revives Firefox OS
-Focused on 4G feature phones
-Lightweight HTML5-based app store
-Used in low-end devices globally (e.g., JioPhone)
-
-Wear OS (Google) Android-based smartwatch OS
-Partnered with Fitbit for fitness features
-Google Assistant, NFC payments, app syncing
-Available on brands like Fossil, TicWatch
-
-tvOS (Apple) Used in Apple TV
-Supports Siri, HomeKit, and Apple Arcade
-Apps built using UIKit or SwiftUI
-
-watchOS (Apple) Runs Apple Watch
-HealthKit, ECG monitoring, emergency detection
-Tightly integrated with iPhone and iCloud
-
-🧪 Experimental / Hobbyist Operating Systems
-
-ReactOS Open-source clone of Windows
-Goal: Run Windows apps and drivers natively
-Not production-ready but great for reverse engineering
-
-Haiku OS Inspired by BeOS (fast multimedia OS from the '90s)
-Single-threaded UI server, responsive performance
-Community-maintained, fully open source
-
-TempleOS Created by the late Terry A. Davis
-Single-user, 16-bit color OS with Biblical themes
-Written entirely in HolyC (custom C-like language)
-Not practical, but fascinating as a solo project
-    </pre>
+This site offers setup guides and info for these operating systems.
+</pre>
   </section>
 
   <section id="chromeos-setup">
-    <h2>ChromeOS Setup</h2>
-    <p><em>Content to be added.</em></p>
-  </section>
+    <h2>🖥️ ChromeOS Setup</h2>
+    <p><strong>Overview:</strong> ChromeOS is a lightweight, cloud-centric operating system designed for speed and simplicity. It's ideal for users who primarily use web applications and value seamless integration with Google services.</p>
 
-  <section id="chromebook-to-windows">
-    <h2>Chromebook To Windows</h2>
-    <p>A complete guide to transitioning your Chromebook device to a full Windows installation. This includes preparing your hardware, unlocking firmware if needed, adjusting BIOS/UEFI settings, and installing Windows smoothly. Perfect for users who want to replace Chrome OS entirely with Windows while ensuring maximum hardware compatibility.</p>
+    <h3>Setup Steps:</h3>
+    <ol>
+      <li><strong>Create a USB Installer:</strong><br />
+        Download the ChromeOS Flex image from the official <a href="https://support.google.com/chromeosflex/answer/11552529?hl=en" target="_blank" rel="noopener noreferrer">ChromeOS Flex Help</a>.<br />
+        Use a tool like <a href="https://support.google.com/chromeos/answer/1080595" target="_blank" rel="noopener noreferrer">Chromebook Recovery Utility</a> to create a bootable USB drive.</li>
+      <li><strong>Boot from USB:</strong><br />
+        Insert the USB drive into your device and restart it.<br />
+        Access the boot menu (usually by pressing F12, ESC, or a similar key during startup) and select the USB drive.</li>
+      <li><strong>Install ChromeOS Flex:</strong><br />
+        Follow the on-screen instructions to install ChromeOS Flex on your device.<br />
+        You can choose to install it permanently or run it temporarily from the USB drive.</li>
+      <li><strong>Set Up ChromeOS:</strong><br />
+        After installation, sign in with your Google account.<br />
+        Customize settings like language, Wi-Fi, and privacy preferences.</li>
+    </ol>
+
+    <h3>Resources:</h3>
+    <ul>
+      <li><a href="https://support.google.com/chromeosflex/answer/11552529?hl=en" target="_blank" rel="noopener noreferrer">ChromeOS Flex Help</a></li>
+      <li><a href="https://support.google.com/chromeosflex/answer/11552529?hl=en" target="_blank" rel="noopener noreferrer">ChromeOS Flex Installation Guide</a></li>
+    </ul>
   </section>
 
   <section id="full-chromebook-linux-setup">
-    <h2>Full Chromebook Linux Setup</h2>
-    <p><em>Content to be added.</em></p>
+    <h2>💻 Full Chromebook Linux Setup</h2>
+    <p><strong>Overview:</strong> Running Linux on a Chromebook allows you to access a full Linux desktop environment alongside ChromeOS, providing greater flexibility for development and customization.</p>
+
+    <h3>Setup Steps:</h3>
+    <ol>
+      <li><strong>Enable Linux (Crostini):</strong><br />
+        Go to <em>Settings &gt; Advanced &gt; Developers</em>.<br />
+        Toggle on <strong>Linux (Beta)</strong> and follow the prompts to set it up.</li>
+      <li><strong>Install Linux Applications:</strong><br />
+        Open the Linux terminal and update package lists:<br />
+        <pre><code>sudo apt update</code></pre>
+        Install desired applications using APT:<br />
+        <pre><code>sudo apt install &lt;package-name&gt;</code></pre>
+      </li>
+      <li><strong>Access Linux Files:</strong><br />
+        Linux files are stored in the <em>Linux files</em> section in the Files app.<br />
+        You can also access ChromeOS files from the Linux environment by navigating to <code>/mnt/chromeos</code>.</li>
+      <li><strong>Customize the Linux Environment:</strong><br />
+        Install a different desktop environment (e.g., XFCE, KDE) if desired.<br />
+        Use tools like <code>gnome-tweaks</code> or <code>lxappearance</code> to adjust the appearance.</li>
+    </ol>
+
+    <h3>Resources:</h3>
+    <ul>
+      <li><a href="https://chromeos.dev/en/linux/setup" target="_blank" rel="noopener noreferrer">ChromeOS Linux Setup Guide</a></li>
+      <li><a href="https://www.youtube.com/watch?v=LX6jP5zpNHo" target="_blank" rel="noopener noreferrer">Installing Linux on a Chromebook (YouTube)</a></li>
+    </ul>
   </section>
 
   <section id="full-linux-windows-setup">
-    <h2>Full Linux Windows Setup</h2>
-    <p><em>Content to be added.</em></p>
+    <h2>🐧 Full Linux Windows Setup</h2>
+    <p><strong>Overview:</strong> This setup involves installing a full Linux distribution alongside or instead of Windows, allowing you to enjoy the benefits of Linux while maintaining access to Windows applications.</p>
+
+    <h3>Setup Steps:</h3>
+    <ol>
+      <li><strong>Choose a Linux Distribution:</strong><br />
+        Popular choices include Ubuntu, Fedora, and Debian.</li>
+      <li><strong>Create a Bootable USB Drive:</strong><br />
+        Download the ISO file of your chosen distribution.<br />
+        Use a tool like <a href="https://rufus.ie/" target="_blank" rel="noopener noreferrer">Rufus</a> to create a bootable USB drive.</li>
+      <li><strong>Install Linux:</strong><br />
+        Insert the USB drive into your computer and restart it.<br />
+        Access the boot menu and select the USB drive.<br />
+        Follow the on-screen instructions to install Linux.<br />
+        Choose to install Linux alongside Windows (dual-boot) or replace Windows entirely.</li>
+      <li><strong>Post-Installation Setup:</strong><br />
+        Update the system:<br />
+        <pre><code>sudo apt update && sudo apt upgrade</code></pre>
+        Install necessary drivers and software.</li>
+    </ol>
+
+    <h3>Resources:</h3>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/linux/install" target="_blank" rel="noopener noreferrer">How to Install Linux on Windows</a></li>
+      <li><a href="https://www.linuxinsider.com/story/how-to-run-a-full-linux-desktop-on-a-chromebook-176864.html" target="_blank" rel="noopener noreferrer">Full Linux Desktop on Chromebook</a></li>
+    </ul>
   </section>
 
   <section id="windows-chromeos-setup">
-    <h2>Windows ChromeOS Setup</h2>
-    <p><em>Content to be added.</em></p>
+    <h2>🌀 Windows ChromeOS Setup</h2>
+    <p><strong>Overview:</strong> Installing ChromeOS on a Windows machine can provide a lightweight, cloud-focused operating system suitable for users who primarily use web applications.</p>
+
+    <h3>Setup Steps:</h3>
+    <ol>
+      <li><strong>Download ChromeOS:</strong><br />
+        Obtain the ChromeOS image from a reliable source.</li>
+      <li><strong>Create a Bootable USB Drive:</strong><br />
+        Use a tool like <a href="https://rufus.ie/" target="_blank" rel="noopener noreferrer">Rufus</a> to create a bootable USB drive with the ChromeOS image.</li>
+      <li><strong>Install ChromeOS:</strong><br />
+        Insert the USB drive into your Windows machine and restart it.<br />
+        Access the boot menu and select the USB drive.<br />
+        Follow the on-screen instructions to install ChromeOS.</li>
+    </ol>
+
+    <h3>Resources:</h3>
+    <ul>
+      <li><a href="https://www.partitionwizard.com/partitionmagic/install-chrome-os-on-windows.html" target="_blank" rel="noopener noreferrer">Install Chrome OS on Windows</a></li>
+    </ul>
   </section>
 
   <section id="windows-setup">
-    <h2>Windows Setup</h2>
-    <p><em>Content to be added.</em></p>
+    <h2>🪟 Windows Setup</h2>
+    <p><strong>Overview:</strong> Setting up Windows involves installing the operating system, configuring settings, and installing necessary drivers and software.</p>
+
+    <h3>Setup Steps:</h3>
+    <ol>
+      <li><strong>Prepare Installation Media:</strong><br />
+        Download the Windows ISO from the <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank" rel="noopener noreferrer">Microsoft website</a>.<br />
+        Use the <a href="https://www.microsoft.com/en-us/software-download/windows10" target="_blank" rel="noopener noreferrer">Media Creation Tool</a> to create a bootable USB drive.</li>
+      <li><strong>Install Windows:</strong><br />
+        Insert the USB drive into your computer and restart it.<br />
+        Access the boot menu and select the USB drive.<br />
+        Follow the on-screen instructions to install Windows.</li>
+      <li><strong>Post-Installation Setup:</strong><br />
+        Set up a user account and password.<br />
+        Connect to the internet.<br />
+        Activate Windows using your product key.<br />
+        Install necessary drivers and software.</li>
+    </ol>
+
+    <h3>Resources:</h3>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-setup-installation-process?view=windows-11" target="_blank" rel="noopener noreferrer">Windows Setup Installation Process</a></li>
+      <li><a href="https://www.windowscentral.com/how-do-clean-install-windows-11" target="_blank" rel="noopener noreferrer">Windows 10 Clean Install Guide</a></li>
+    </ul>
   </section>
 </main>
 
 <script>
-  // Navigation smooth scroll and active link highlight
-  const navLinks = document.querySelectorAll('nav a.nav-link');
+  // Smooth scroll and nav active highlight
+  const navLinks = document.querySelectorAll('.nav-link');
   const sections = [...document.querySelectorAll('main section')];
 
-  function onScroll() {
-    const scrollPos = window.scrollY + 100; // offset to highlight earlier
+  function setActiveLink() {
+    let index = sections.length;
 
-    for (const link of navLinks) {
-      link.classList.remove('active');
-    }
-
-    let currentSection = sections[0];
-    for (const section of sections) {
-      if (section.offsetTop <= scrollPos) {
-        currentSection = section;
-      }
-    }
-
-    const activeLink = [...navLinks].find(a => a.getAttribute('href') === '#' + currentSection.id);
-    if (activeLink) activeLink.classList.add('active');
-
-    // Show section animations
-    sections.forEach(section => {
-      if (window.scrollY + window.innerHeight > section.offsetTop + 100) {
-        section.classList.add('visible');
-      }
-    });
+    while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+    
+    navLinks.forEach(link => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
   }
 
-  window.addEventListener('scroll', onScroll);
+  setActiveLink();
+  window.addEventListener('scroll', setActiveLink);
 
-  // Smooth scroll on nav click
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (!targetSection) return;
-      window.scrollTo({
-        top: targetSection.offsetTop - 80,
-        behavior: 'smooth'
-      });
+      const targetId = e.target.getAttribute('href').slice(1);
+      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-  // Initial trigger
-  onScroll();
+  // Animate section appearance on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
 </script>
 
 </body>
 </html>
-
